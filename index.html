@@ -4,69 +4,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <style>
+          .shadow-text{
+            text-shadow: 0.1rem 0.1rem white;
+            color: rgb(202, 186, 186);
+            font-family: 'Courier New', Courier, monospace;
+          }
+        </style>  
     </head>
                     
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                  <!--HOLO URL-->
-                  <a class="navbar-brand" href="#">HoloEN</a>
-                  <!--HOLO URL-->
-                  <!--sd Toogle btn-->
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <!--sd Toogle btn-->
-                  <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <!--nav Items-->  
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Twitter</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">YouTube</a>
-                      </li>
-                      <!--nav Items-->  
-                      <!--Dropdown-->
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Member
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Waston Amelia</a></li>
-                          <li><a class="dropdown-item" href="#">Gawr Gura</a></li>
-                          <li><a class="dropdown-item" href="#">Ninomae Ina'nls</a></li>
-                          <li><a class="dropdown-item" href="#">Takanashi Kiara</a></li>
-                          <li><a class="dropdown-item" href="#">Mori Calliope</a></li>
-                        </ul>
-                      </li>
-                      <!--Dropdown-->
-                    </ul>
-                    <form class="d-flex ">
-                      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit"><span class="fas fa-search" aria-hidden="true"></span></button>
-                    </form>
-                  </div>
-                </div>
-              </nav>
-        </header>
-        <main>
-          <div id="myCarousel" class="carousel " data-bs-ride="carousel">
-            <ol></ol>
-            <div class=" carousel-inner">
-              <div class=" carousel-item"></div>
-              <div class=" carousel-item"></div>
-              <div class=" carousel-item"></div>
-            </div>
-          </div>
-        </main>
-        <footer>
-
-        </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
+    <body class="container-fluid ">
+      <div class="position-relative">
+        <p class="position-absolute w-100 text-center fs-2 fs-sm-1 fs-md-1 fs-lg-1  shadow-text" >XX茶文化</p>
+        <img src="img/tea.jpg" class="img-fluid w-100" alt="茶園">
+      </div>
+      <div class=" row mt-1 text-center justify-content-end">
+        <div class="row-cols-4 text-center row-cols-md-6 text-md-end mx-0">
+            <a class="col-3 col-md-1 btn btn-primary disabled m-md-1" href="#">More</a>
+            <a class="col-3 col-md-1 btn btn-primary disabled m-md-1" href="#">More</a>
+            <a class="col-3 col-md-1 btn btn-primary disabled m-md-1" href="#">More</a>
+        </div>
+      </div>
+      <script src="js/bootstrap.bundle.min.js"> </script>
     </body>
 </html>
