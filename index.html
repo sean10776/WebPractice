@@ -16,7 +16,7 @@
   </style>
 </head>
 
-<body class="position-relative">
+<body class="position-relative" style="scroll-behavior: smooth;">
   <script src="js/bootstrap.bundle.min.js"></script>
   <div class="title-text row text text-center position-relative">
     <h1 class="mt-2 position-absolute ">XX茶文化</h1>
@@ -36,7 +36,7 @@
         <p style="color: #336dc4; font-size: medium;">
           <span class="h4">農產品銷售履歷<br></br></span>
           什麼是農產履，追蹤農產品的生產、銷售的履歷過程
-          <a href>...點我看更多</a>
+          <a href="#Resume">...點我看更多</a>
         </p>
       </div>
       <!--xl以上顯示-->
@@ -44,7 +44,7 @@
         <p class="h3" style="color: #336dc4;">
           <span class="display-5">農產品銷售履歷<br><br></span>
           什麼是農產履，追蹤農產品的生產、銷售的履歷過程
-          <a href>...點我看更多</a>
+          <a href="#Resume">...點我看更多</a>
         </p>
       </div>
     </div>
@@ -71,24 +71,48 @@
       <div class="item h-100 d-xl-none d-block">
         <p style="color: #336dc4; font-size: medium;">
           <span class="h4">More<br></br></span>
-          <a href>more...</a>
+          <a href="#More">more...</a>
         </p>
       </div>
       <!--xl以上顯示-->
       <div class="item h-100 d-xl-block d-none">
         <p class="h3" style="color: #336dc4;">
           <span class="display-5">More<br><br></span>
-          <a href>more...</a>
+          <a href="#More">more...</a>
         </p>
       </div>
     </div>
   </div>
+
   <div class="container mt-5">
+    <!--產銷履歷-->
+    <hr class="featurette-divider">
+    <div class="row featurette" id="Resume">
+      <div class="col-md-5 order-md-1">
+        <!--xl以下顯示-->
+        <div class="item d-xl-none d-block">
+          <p class="lead text-wrap" style="color: #336dc4; font-size: medium;">
+            <span class="h4">農產品銷售履歷<br></span>
+          </p>
+        </div>
+        <!--xl以上顯示-->
+        <div class="item d-xl-block d-none">
+          <p class="lead text-wrap" style="color: #336dc4;">
+            <span class="display-5 featurette-heading">農產品銷售履歷<br></span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-7 order-md-2">
+        <!-- <img src="" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"> -->
+      </div>
+    </div>
+
+    <!--認識茶園-->
     <hr class="featurette-divider">
     <div class="row featurette" id="tea_park">
       <div class="col-md-7 order-md-2">
         <!--xl以下顯示-->
-        <div class="item w-100 d-xl-none d-block">
+        <div class="item d-xl-none d-block">
           <p class="lead text-wrap" style="color: #336dc4; font-size: medium;">
             <span class="h4">認識茶園<br></span>
             * 擁有醉人香檳風味的東方美人茶，又名膨風茶、白毫烏龍茶、椪風茶<br>
@@ -101,7 +125,7 @@
           </p>
         </div>
         <!--xl以上顯示-->
-        <div class="item h-100 d-xl-block d-none">
+        <div class="item d-xl-block d-none">
           <p class="lead text-wrap" style="color: #336dc4;">
             <span class="display-5 featurette-heading">認識茶園<br></span>
             * 擁有醉人香檳風味的東方美人茶，又名膨風茶、白毫烏龍茶、椪風茶<br>
@@ -119,11 +143,27 @@
       </div>
     </div>
 
+    <!--More-->
     <hr class="featurette-divider">
-    <div class="row-featurette"></div>
-
-    <hr class="featurette-divider">
-    <div class="row-featurette"></div>
+    <div class="row featurette" id="More">
+      <div class="col-md-5 order-md-1">
+        <!--xl以下顯示-->
+        <div class="item d-xl-none d-block">
+          <p class="lead text-wrap" style="color: #336dc4; font-size: medium;">
+            <span class="h4">More<br></span>
+          </p>
+        </div>
+        <!--xl以上顯示-->
+        <div class="item d-xl-block d-none">
+          <p class="lead text-wrap" style="color: #336dc4;">
+            <span class="display-5 featurette-heading">More<br></span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-7 order-md-2">
+        <!-- <img src="" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"> -->
+      </div>
+    </div>
   </div>
   <footer class="text-center text-md-end">
     <img src="img/Leaf.png" alt="" class="center float-md-end">
