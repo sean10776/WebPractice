@@ -3,7 +3,6 @@ let s2 = "認識茶園<br>"
 let s3 = "More<br>"
 let upper = false //判斷機型
 
-
 function Area_resize() {
     upper = ($("#upper-xl").css('display') !== 'none')
 
@@ -14,11 +13,11 @@ function Area_resize() {
     if (upper === true) {
         news.addClass('display-5 featurette-heading')
         Area.addClass("display-5")
-        $("#Area p").addClass("h3")
+        $("#Area #content").addClass("h3")
     } else {
         news.addClass("h2")
         Area.addClass("h4")
-        $("#Area p").removeAttr('class')
+        $("#Area #content").removeAttr('class')
     }
 }
 
@@ -33,4 +32,54 @@ let s4= " * 擁有醉人香檳風味的東方美人茶，又名膨風茶、白�
 function text_init(){
     $("#tea_park span").html(s2)
     $("#tea_park p").html(s4)
+}
+
+function img_init(){
+    $("#tea_park img").attr("src", "img/Tea_park.jpg")
+}
+
+function news_init(a){
+    let title = ""
+    let content = ""
+    let img_src = ""
+    switch(a){
+        case "Resume_news":
+            title = s1
+            break
+        case "Tea_news":
+            title = s2
+            content = s4
+            img_src = "img/Tea_park.jpg"
+            break
+        case "More_news":
+            title = s3
+            break
+    }
+    $('#' + a + ' span').html(title)
+    $('#' + a + ' p').html(content)
+    $('#' + a + ' img').attr("src", img_src)
+}
+
+function News_showup(){
+    $('#Area a').click(a=>{
+        a.preevnt
+        let N_id = a.target.id + "_news"
+        let dis = $('#news').attr('display')
+        if($('#news div').first().attr('id') === N_id && dis !== 'none'){ //已打開再按同一個關閉
+            $('#news').slideUp('slow')
+            $('#news div').first().removeAttr('id')
+        }else if($('#news div').first().attr('id') !== N_id ){             //已打開按不同個
+            $('#news').slideUp('slow')
+            $('#news div').first().removeAttr('id').attr("id", N_id)
+            news_init(N_id)
+            $('#news').slideDown(50)
+            $('html, body').animate({scrollTop:$('#news').offset().top}, 'slow')
+        }else{                                                              //打開
+            $('#news div').first().removeAttr('id').attr("id", N_id)
+            news_init(N_id)
+            $('#news').slideDown(20)
+            $('html, body').animate({scrollTop:$('#news').offset().top}, 'fast')
+        }
+        return false
+    })
 }

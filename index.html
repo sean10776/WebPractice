@@ -17,11 +17,12 @@
   <script>
     $(function(){
       Area_resize()
-      text_init()
+      News_showup()
     });
     $(window).resize(()=>{
       Area_resize()
     });
+    
   </script>
 </head>
 
@@ -40,71 +41,46 @@
     <a href="#" class="col col-md-auto btn btn-primary">More</a>
   </div>
 
-  <div id="Area" class="row mt-3 h-auto" style="color: #336dc4;">
-    <div class="offset-1 col-11 col-md-3 border-start">
-      <div class="item h-100">
-        <p>
-          <span>農產品銷售履歷</span><br>
-          <br>什麼是農產履，追蹤農產品的生產、銷售的履歷過程
-          <button type="button" class="btn btn-link">...點我看更多</button>
+  <div id="Area" class="row mt-3 h-auto d-md-flex justify-content-md-around" style="color: #336dc4;">
+    <div class="col-11 col-md-3 border-start position-relative mx-4">
+      <div class="px-0 h-100">
+        <p class="mb-4"><span>農產品銷售履歷</span></p>
+        <p id="content">
+          什麼是農產履，追蹤農產品的生產、銷售的履歷過程
+          <a id="Resume" href="#" class="stretched-link">...</a>
         </p>
       </div>
     </div>
-    <div class="offset-1 col-11 col-md-3 border-start mt-3 mt-md-0">
-      <div class="item h-100">
-        <p>
-          <span>認識茶園</span><br>
-          <br>我們擁有醉人香檳風味的東方美人茶，又名膨風茶、白毫烏龍茶、椪風茶
-          <button type="button" class="btn btn-link">...</button>
+    <div class="col-11 col-md-3 border-start mt-3 mt-md-0 position-relative mx-4">
+      <div class="container px-0 h-100">
+        <p class="mb-4"><span>認識茶園</span></p>
+        <p id="content">
+          我們擁有醉人香檳風味的東方美人茶，又名膨風茶、白毫烏龍茶、椪風茶
+          <a id="Tea" href="#" class="stretched-link">...</a>
         </p>
       </div>
     </div>
-    <div class="offset-1 offset-md-0 col-11 col-md-2 border-start mt-3 mt-md-0">
-      <div class="item h-100">
-        <p>
-          <span>More</span><br>
-          <button type="button" class="btn btn-link">...</button>
+    <div class="col-11 col-md-3 border-start mt-3 mt-md-0 position-relative mx-4">
+      <div class="container px-0 h-100">
+        <p class="mb-4"><span>More</span></p>
+        <p id="content">
+          <!-- More -->
+          <a id="More" href="#news" class="stretched-link">...</a>
         </p>
       </div>
     </div>
   </div>
 
-  <hr class="container featurette-divider mt-5">
-
-
-  <div id="news" class="container mt-5">
-    <!--產銷履歷-->
-    <div class="row featurette" id="Resume">
-      <div class="item col-md-5 order-md-1 lead text-wrap" style="color: #336dc4;">
-        <span></span>
-        <p></p>
-      </div>
-      <div class="col-md-7 order-md-2">
-        <!-- <img src="" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"> -->
-      </div>
-    </div>
-
-    <!--認識茶園-->
+  <div id="news" class="container-fluid mt-5" style="display: none">
     <hr class="featurette-divider">
-    <div class="row featurette" id="tea_park">
-      <div class="item col-md-7 order-md-2 lead text-wrap" style="color: #336dc4;">
+    <div id="none" class="row featurette">
+      <!-- 改成新聞格式 -->
+      <div class="col-md-7 order-md-2 lead text-wrap" style="color: #336dc4;">
         <span></span>
         <p></p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img src="img/Tea_park.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
-      </div>
-    </div>
-
-    <!--More-->
-    <hr class="featurette-divider">
-    <div class="row featurette" id="More">
-      <div class="item col-md-5 order-md-1 lead text-wrap" style="color: #336dc4;">
-        <span></span>
-        <p></p>
-      </div>
-      <div class="col-md-7 order-md-2">
-        <!-- <img src="" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"> -->
+        <img alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
       </div>
     </div>
   </div>
