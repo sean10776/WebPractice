@@ -50,8 +50,8 @@ function news_init(a){
         case "Tea_news":
             total = 2
             title = ["東方美人", "擁有好的茶"]
-            content = [s4, s4]
-            img_src = ["img/Tea_park.jpg", "img/Tea_park2.jpg"]
+            // content = [s4, s4]
+            img_src = ["img/Tea_park_card.jpg", "img/Tea_park2_card.jpg"]
             break
         case "More_news":
             title = s3
