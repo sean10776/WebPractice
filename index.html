@@ -19,6 +19,9 @@
     $(function(){
       Area_resize()
       News_showup()
+      $("#news").click().each(a=>{
+        console.log($(this).find('a').get('id'))
+      })
     });
     $(window).resize(()=>{
       Area_resize()
@@ -50,8 +53,8 @@
         </a>
       </div>
     </div>
-    <div class="col-11 col-md-3 border-start mt-3 mt-md-0 position-relative mx-4">
-      <div class="container px-0 h-100">
+    <div class="col-11 col-md-3 border-start position-relative mx-4 mt-3 mt-md-0">
+      <div class="px-0 h-100">
         <p class="mb-4"><span>認識茶園</span></p>
         <a id="Tea" href="#" class="stretched-link text-inherit">
           我們擁有醉人香檳風味的東方美人茶，又名膨風茶、白毫烏龍茶、椪風茶
@@ -59,8 +62,8 @@
         </a>
       </div>
     </div>
-    <div class="col-11 col-md-3 border-start mt-3 mt-md-0 position-relative mx-4">
-      <div class="container px-0 h-100">
+    <div class="col-11 col-md-3 border-start position-relative mx-4 mt-3 mt-md-0">
+      <div class="px-0 h-100">
         <p class="mb-4"><span>More</span></p>
         <!-- More -->
         <a id="More" href="#news" class="stretched-link text-inherit">...</a>
@@ -68,19 +71,33 @@
     </div>
   </div>
 
-  <div id="news" class="container-fluid mt-5 mx-md-5" style="display: none">
+  <div id="news" class="mt-5 mx-md-5 text-center" style="display: none">
     <hr class="featurette-divider">
     <div id="none" class="row featurette">
+      <!-- Card model -->
       <div id="tid-0" class="col-12 col-md-4 col-lg-3" style="display: none">
         <div class="card mb-4 card-hover">
           <img src="" class="rounded-top card-img-top" alt="">
           <div class="card-body text-center">
             <span class="mb-2 text-truncate-line-2">
-              <a href="#" class="text-inherit stretched-link"></a>
+              <a href="javascript:void(0)" class="text-inherit stretched-link" onclick="show_news_content()"></a>
             </span>
             <p class="card-text"></p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- news content -->
+  <div id="news_content" class="mt-5 mx-md-5" style="display: none">
+    <hr class="featurette-divider">
+    <div class="row">
+      <img src="" alt="" class="col-md-5">
+      <div class="col-md-7">
+        <span class="mb-2"></span>
+        <br>
+        <p class="px-3"></p>
       </div>
     </div>
   </div>
